@@ -1,0 +1,17 @@
+.menu{
+    position: absolute;
+    display: block;
+    width: 100vw;
+    height: 100vh;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    z-index: 100;
+}
+
+@media (min-width:720px){
+    .menu_btn{
+        display: none;
+    }
+}

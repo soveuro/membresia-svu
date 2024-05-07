@@ -1,9 +1,13 @@
 import { component$ } from "@builder.io/qwik";
 import type { DocumentHead } from "@builder.io/qwik-city";
-import { Link } from "@builder.io/qwik-city";
+import { routeLoader$ } from "@builder.io/qwik-city";
+import { checkSession } from "~/hooks/useCheckSession";
+
+const useCheckSession = routeLoader$(checkSession)
 
 
 export default component$(() => {
+  useCheckSession()
   return (
     <>
       <div class="flex sm:flex-row flex-col h-screen w-full">
@@ -12,12 +16,12 @@ export default component$(() => {
           <img src="/Logo-Original-M.png" alt="" />
         </div>
         <div class="sm:w-1/2 w-full h-1/2 sm:h-full bg-black flex flex-col justify-center items-center text-center">
-          <Link class="px-8 py-4 font-bold rounded w-2/3 mb-8 bg-[#ffff00] text-xl" href="/ingresar">
+          <a class="px-8 py-4 font-bold rounded w-2/3 mb-8 bg-[#ffff00] text-xl" href="/ingresar">
             <span >Ingresar</span>
-          </Link>
-          <Link class="px-8 py-4 font-bold rounded w-2/3 bg-[#ffff00] text-xl" href="/inscribir">
+          </a>
+          <a class="px-8 py-4 font-bold rounded w-2/3 bg-[#ffff00] text-xl" href="/inscribir">
             <span >Inscribirme</span>
-          </Link>
+          </a>
         </div>
       </div>
     </>

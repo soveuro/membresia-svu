@@ -10,7 +10,7 @@ export const isLogged = async (requestEvent)=>{
     })
     const token = cookie.get("jwt")
   
-    if(!token.value) throw redirect(302,"/ingresar")
+    if(!token?.value) throw redirect(302,"/ingresar")
     try{
       const {uid,device} = jwt.verify(token?.value, env.get("SECRETORPRIVATEKEY"))
       

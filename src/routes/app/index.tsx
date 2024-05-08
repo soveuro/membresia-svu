@@ -184,10 +184,11 @@ export default component$( function () {
             
           </div>
         </div>
-        <div class="menu_btn absolute z-[110] bottom-4 left-4">
+
+      </div>
+      <div class="menu_btn absolute z-[999] bottom-10 left-4">
           <img src="/menu.svg" class="w-12 h-12 cursor-pointer" onClick$={()=>isBarVisible.value=!isBarVisible.value} alt="" />
         </div>
-      </div>
     </>
   );
 });

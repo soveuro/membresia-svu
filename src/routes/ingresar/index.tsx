@@ -9,8 +9,6 @@ import { checkSession } from "~/hooks/useCheckSession";
 import ImgLogoL from "~/media/Logo-Original-M.png?jsx"
 import ImgDoctor from '~/media/doctor.png?jsx';
 
-export const useCheckSession = routeLoader$(checkSession)
-
 const login = server$(async function({id,password}){
   //@ts-ignore
   this.cacheControl({
@@ -57,9 +55,11 @@ const login = server$(async function({id,password}){
 
   return {ok:false, message:"invalid password"}
 })
+const useCheckSession = routeLoader$(checkSession)
 
-export default component$(() => {
-  useCheckSession()
+export default component$(function (){
+  useCheckSession().value;
+
   const error = useSignal<boolean>(false)
   
   const onLogin = $(async (e:Event)=>{

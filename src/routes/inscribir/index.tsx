@@ -11,9 +11,6 @@ import { checkSession } from "~/hooks/useCheckSession";
 import ImgLogoL from "~/media/Logo-Original-M.png?jsx"
 import ImgDoctor from '~/media/doctor.png?jsx';
 
-
-export const useCheckSession = routeLoader$(checkSession)
-
 const register = server$(async function (data: any) {
   this.cacheControl({
     public: false,
@@ -66,12 +63,13 @@ const register = server$(async function (data: any) {
 });
 
 
+const useCheckSession = routeLoader$(checkSession)
 
-export default component$(() => {
+export default component$(function() {
+  useCheckSession().value;
 
   const error = useSignal(false)
   const nav = useNavigate()
-  useCheckSession()
   const errorMessage = useSignal(
     <div>
       <b>Datos incompletos</b>, por favor ingrese todos los datos solicidatos.

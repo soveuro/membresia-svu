@@ -3,11 +3,9 @@ import type { DocumentHead } from "@builder.io/qwik-city";
 import { routeLoader$ } from "@builder.io/qwik-city";
 import { checkSession } from "~/hooks/useCheckSession";
 
-const useCheckSession = routeLoader$(checkSession)
 
-
-export default component$(() => {
-  useCheckSession().value
+export default component$(function(){
+  routeLoader$(checkSession)().value
   return (
     <>
       <div class="flex sm:flex-row flex-col h-screen w-full">

@@ -7,7 +7,7 @@ import { objToInsertSql } from "~/helpers/objToInsertSql";
 import { genSaltSync, hashSync } from "bcrypt";
 import generateJWT from "~/helpers/generateJwt";
 import { compactObject } from "@fxts/core";
-import {checkSession} from "~/hooks/useCheckSession";
+import {checkSession} from "~/hooks/checkSession";
 import ImgLogoL from "~/media/Logo-Original-M.png?jsx"
 import ImgDoctor from '~/media/doctor.png?jsx';
 

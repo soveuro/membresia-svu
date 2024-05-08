@@ -10,7 +10,7 @@ export function isLogged (requestEvent){
     })
     const token = cookie.get("jwt")
     console.log(!token)
-    if(!token) throw redirect(302,"/ingresar")
+    if(!token) throw redirect(302,"/app/ingresar")
     try{
       const {uid,device} = jwt.verify(token?.value, env.get("SECRETORPRIVATEKEY"))
       

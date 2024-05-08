@@ -5,7 +5,7 @@ import { compareSync } from "bcrypt";
 import { db } from "~/db/config";
 import { formToObj } from "~/helpers/formToObj";
 import generateJWT from "~/helpers/generateJwt";
-import {checkSession}  from "~/hooks/useCheckSession";
+import {checkSession}  from "~/hooks/checkSession";
 import ImgLogoL from "~/media/Logo-Original-M.png?jsx"
 import ImgDoctor from '~/media/doctor.png?jsx';
 

@@ -14,7 +14,7 @@ const datos = {
   phone:"",
 }
 
-const useIsLogged = routeLoader$(isLogged)
+const useIsLogged = routeLoader$(isLogged);
 export default component$(() => {
   const nav = useNavigate()
   

@@ -54,8 +54,8 @@ const login = server$(async function({id,password}){
   }
 
   return {ok:false, message:"invalid password"}
-})
-const useCheckSession = routeLoader$(checkSession)
+});
+const useCheckSession = routeLoader$(checkSession);
 
 export default component$(function (){
   useCheckSession().value;

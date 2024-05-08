@@ -63,7 +63,7 @@ const register = server$(async function (data: any) {
 });
 
 
-const useCheckSession = routeLoader$(checkSession)
+const useCheckSession = routeLoader$(checkSession);
 
 export default component$(function() {
   useCheckSession().value;

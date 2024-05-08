@@ -11,6 +11,7 @@ export function checkSession (requestEvent){
     })
 
     const token = cookie.get("jwt")
+    console.log(!!token,token)
     if(!!token) throw redirect(302, "/app")
     
     

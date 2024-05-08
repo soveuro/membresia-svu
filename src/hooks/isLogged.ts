@@ -26,4 +26,4 @@ export function isLogged (requestEvent){
   
   
     }
-  }
+}

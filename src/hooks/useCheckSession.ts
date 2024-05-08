@@ -1,7 +1,7 @@
 import { routeLoader$ } from "@builder.io/qwik-city"
 import jwt from "jsonwebtoken";
 
-export async function checkSession (requestEvent){
+export function checkSession (requestEvent){
     const {cookie,cacheControl,redirect} = requestEvent
     cacheControl({
       public: false,

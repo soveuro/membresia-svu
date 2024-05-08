@@ -3,6 +3,7 @@
       "bcrypt": "https://deno.land/x/bcrypt@v0.4.1/mod.ts",
       "@libsql/client":"npm:@libsql/client",
       "jsonwebtoken":"npm:jsonwebtoken",
-      "dotenv":"npm:dotenv"
+      "dotenv":"npm:dotenv",
+      "@fxts/core":"npm:@fxts/core"
     }
   }

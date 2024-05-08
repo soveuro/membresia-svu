@@ -5,7 +5,7 @@ import { compareSync } from "bcrypt";
 import { db } from "~/db/config";
 import { formToObj } from "~/helpers/formToObj";
 import generateJWT from "~/helpers/generateJwt";
-import { checkSession } from "~/hooks/useCheckSession";
+import checkSession  from "~/hooks/useCheckSession";
 import ImgLogoL from "~/media/Logo-Original-M.png?jsx"
 import ImgDoctor from '~/media/doctor.png?jsx';
 
@@ -58,6 +58,7 @@ const login = server$(async function({id,password}){
 const useCheckSession = routeLoader$(checkSession);
 
 export default component$(function (){
+  console.log('/index');
   useCheckSession().value;
 
   const error = useSignal<boolean>(false)

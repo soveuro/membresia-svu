@@ -1,5 +1,6 @@
 import { component$ } from "@builder.io/qwik";
-import { Link, useNavigate } from "@builder.io/qwik-city";
+import { Link, routeLoader$, useNavigate } from "@builder.io/qwik-city";
+import { isLogged } from "~/hooks/isLogged";
 
 const datos = {
   id: "",
@@ -11,9 +12,11 @@ const datos = {
   email:"",
   phone:"",
 }
+const useIsLogged = routeLoader$(isLogged)
 
 export default component$(() => {
   const nav = useNavigate()
+    useIsLogged().value
 
     return (
       <>

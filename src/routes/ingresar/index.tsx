@@ -19,7 +19,6 @@ const login = server$(async function({id,password}){
     sMaxAge: 0,
     staleWhileRevalidate: 0,
   })
-
   const [result1,result2] = await Promise.all([
     db(
       this.env.get("PRIVATE_TURSO_DB_URL"),

@@ -25,7 +25,7 @@ const logout = server$(function(){
   console.log((this as any).cookie, "logout")
 })
 
-const useGetCookie = routeLoader$(async (requestEvent)=>{
+const useGetCookie = routeLoader$(async function (requestEvent){
   const {cookie,redirect,request,cacheControl,env} = requestEvent
   cacheControl({
     public: false,

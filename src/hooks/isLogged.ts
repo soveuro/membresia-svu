@@ -1,6 +1,6 @@
 import jwt from "jsonwebtoken";
 
-export const isLogged = async (requestEvent)=>{
+export function isLogged (requestEvent){
     const {cookie,redirect,request,cacheControl,env} = requestEvent
     cacheControl({
       public: false,
@@ -9,16 +9,16 @@ export const isLogged = async (requestEvent)=>{
       staleWhileRevalidate: 0,
     })
     const token = cookie.get("jwt")
-  
-    if(!token?.value) throw redirect(302,"/ingresar")
+    console.log(!token)
+    if(!token) throw redirect(302,"/ingresar")
     try{
       const {uid,device} = jwt.verify(token?.value, env.get("SECRETORPRIVATEKEY"))
       
-  
-      if(device!=request.headers.get("user-agent")) {
+      console.log(uid,device)
+      /*if(device!=request.headers.get("user-agent")) {
         cookie.delete("jwt")
         throw redirect(302,"/ingresar")
-      }
+      }*/
 
       return {ok:true, uid}
   

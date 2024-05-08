@@ -7,7 +7,7 @@ const useCheckSession = routeLoader$(checkSession)
 
 
 export default component$(() => {
-  useCheckSession()
+  useCheckSession().value
   return (
     <>
       <div class="flex sm:flex-row flex-col h-screen w-full">

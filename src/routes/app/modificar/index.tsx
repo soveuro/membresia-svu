@@ -18,7 +18,7 @@ const useIsLogged = routeLoader$(isLogged)
 export default component$(() => {
   const nav = useNavigate()
   
-  const {uid} = useIsLogged().value
+  useIsLogged().value
     return (
       <>
         <form preventdefault:submit class="min-w-full bg-black min-h-screen px-10 py-8 text-white">

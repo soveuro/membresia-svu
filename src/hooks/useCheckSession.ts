@@ -1,6 +1,7 @@
 import { routeLoader$ } from "@builder.io/qwik-city"
+import jwt from "jsonwebtoken";
 
-export const checkSession = async (requestEvent)=>{
+export async function checkSession (requestEvent){
     const {cookie,cacheControl,redirect} = requestEvent
     cacheControl({
       public: false,
@@ -10,6 +11,8 @@ export const checkSession = async (requestEvent)=>{
     })
 
     const token = cookie.get("jwt")
-    console.log(token,"CheckSe")
-    if(token?.value) throw redirect(302, "/app")
+    console.log(!!token)
+    if(!!token) throw redirect(302, "/app")
+    
+    
 }

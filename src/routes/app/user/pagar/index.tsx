@@ -45,7 +45,7 @@ export default component$(() => {
             </div>
           
 
-          <button onClick$={()=>nav("/app")} class="mt-8 sm:mr-8 bg-white text-black focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center ">Regresar</button>
+          <button onClick$={()=>nav("/app/user")} class="mt-8 sm:mr-8 bg-white text-black focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center ">Regresar</button>
           <button type="submit" class="mt-4 bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center  dark:bg-blue-600  dark:hover:bg-blue-700  dark:focus:ring-blue-800">Guardar</button>
 
         </form>

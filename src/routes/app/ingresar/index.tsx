@@ -5,7 +5,7 @@ import { compareSync } from "bcrypt";
 import { db } from "~/db/config";
 import { formToObj } from "~/helpers/formToObj";
 import generateJWT from "~/helpers/generateJwt";
-import checkSession  from "~/hooks/useCheckSession";
+import {checkSession}  from "~/hooks/useCheckSession";
 import ImgLogoL from "~/media/Logo-Original-M.png?jsx"
 import ImgDoctor from '~/media/doctor.png?jsx';
 
@@ -70,7 +70,7 @@ export default component$(function (){
     error.value= !result.ok
     if(result.ok) {
       console.log(result.jwt);
-      (window as any).location = "/app"
+      (window as any).location = "/app/user"
     }
 
   })

@@ -131,7 +131,7 @@ export default component$( function () {
             }} class="px-8 cursor-pointer font-bold rounded w-full mb-8 bg-black text-[#ffff00] text-base">Registrar pago</buttton>
             <buttton onClick$={async()=>{
               await logout();
-              (window as any).location ="/ingresar"
+              (window as any).location ="/app/ingresar"
             }} class="px-8 cursor-pointer font-bold rounded w-full mb-8 bg-black text-[#ffff00] text-base">Cerrar sesión</buttton>
           </div>
           <Link href="/">
